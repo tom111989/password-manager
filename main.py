@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd  # Storing users password data in csv and reading into a pandas dataframe
 import base64  # Encoding used to store raw bytes data to to channels that only support text (i.e. csv)
 import pandastable  # TKInter widget for displaying dataframes
-import bcrypt  # For creating hash of encryption key and for checking the user entered key against it
+import bcrypt  # For creating a salted hash of encryption key and for checking the user entered key against it
 from Crypto.Cipher import Salsa20  # Stream cipher I use to encrypt the password data
 
 BLACK = '#323131'
@@ -18,8 +18,6 @@ SYMBOLS = '! ? @ # : & * % $ ^'.split()
 
 key_1 = ''
 key_2 = ''
-
-# FIXME: not saving keys entered by user properly to variables. Think it is as call get() before enter mainloop
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
